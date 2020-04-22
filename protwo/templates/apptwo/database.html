@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Assignment</title>
+  </head>
+  <body>
+    <h1>Here the users:</h1>
+
+    <div class="assign">
+      {% if data %}
+
+      <ol>
+        {% for user in data %}
+        <li>User info</li>
+          <ul>
+            <li>Firstname: {{ user.Firstname }}</li>
+            <li>Lastname: {{ user.Lastname }}</li>
+            <li>Email: {{ user.Email }}</li>
+
+        </ul>
+      {% endfor %}
+      </ol>
+
+      {% else %}
+      <p>No Access Record Found</p>
+
+      {% endif %}
+
+
+    </div>
+
+
+  </body>
+</html>
